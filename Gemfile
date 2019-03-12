@@ -12,10 +12,10 @@ gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'webpacker', '~> 3.5'
 gem 'tailwindcss', '~> 0.2.0'
+gem 'devise'
 
 group :development, :test do
   gem 'factory_bot_rails'
-  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
