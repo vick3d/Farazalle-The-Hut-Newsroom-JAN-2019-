@@ -14,6 +14,13 @@ gem 'webpacker', '~> 3.5'
 gem 'tailwindcss', '~> 0.2.0'
 
 group :development, :test do
+  gem 'factory_bot_rails'
+  gem 'pry-byebug'
+  gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
 end
 
 group :development do
