@@ -12,10 +12,7 @@ Feature: Visitor can view all listed articles
     
     Scenario: View list of articles on the landing page
         Given I visit the "landing" page
-        Then I should see "The Hub News is the site of the moment"
-        And I should see "Great articles! This site's popularity is raising so quick!"
-        And I should see "Spring hasn't arrived in Sweden yet"
-        And I should see "Ice can be still spotted on the street, watch out!"
-        And I should see "Eating cinnamon buns increases life expectancy"
-        And I should see "Researchers are running clinical studies to see the benefits of cinnamon buns consumption. Some..."
-        But I should not see "state that it might be correlated with an increase in life expectancy, is that really true?"
+        Then I should see "Great articles! This site's popularity is raising so quick!" for "The Hub News is the site of the moment"
+        And I should see "Researchers are running clinical studies to see the benefits of cinnamon buns consumption. Some..." for "Eating cinnamon buns increases life expectancy"
+        But I should not see "state that it might be correlated with an increase in life expectancy, is that really true?" for "Eating cinnamon buns increases life expectancy"
+        And I should not see "Great articles! This site's popularity is raising so quick!" for "Spring hasn't arrived in Sweden yet"
