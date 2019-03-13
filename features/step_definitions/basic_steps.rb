@@ -16,3 +16,7 @@ end
 Given("I fill in {string} with {string}") do |element, value|
 	fill_in element, with: value
 end
+
+And("I should be redirected to the purchase subscription page") do
+	expect(current_path).to eq new_user_registration_path
+end
