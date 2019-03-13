@@ -15,3 +15,10 @@ Then("I should not see {string} for {string}") do |expected_content, title|
 		expect(page).not_to have_content expected_content
 	end
 end
+
+Then("I click on {string} for {string}") do |element, title|
+	@article = Article.find_by_title(title)
+	within("#article_#{@article.id}") do
+		click_on element
+	end
+end
