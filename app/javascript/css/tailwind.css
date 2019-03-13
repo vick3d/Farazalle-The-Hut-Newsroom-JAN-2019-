@@ -3,31 +3,20 @@
 @tailwind utilities;
 
 h1 {
-  @apply text-center;
-  @apply m-6;
-
+  @apply text-center m-6
 }
 .articles{
-  @apply flex;
-  @apply p-4;
+  @apply flex p-4
 }
 
-
 .article_box{
-  @apply text-center;
-  @apply border-black;
-  @apply border-solid;
-  @apply border-2;
-  @apply m-4;
+  @apply text-center border-black border-solid border-2 m-4
 }
 
 h3 {
-  @apply text-center;
-  @apply pt-6;
+  @apply text-center pt-6
 }
 
 p {
-  @apply text-center;
-  @apply p-4;
-  @apply text-justify;
+  @apply text-center p-4 text-justify
 }
