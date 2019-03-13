@@ -10,6 +10,8 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 
+require 'coveralls'
+Coveralls.wear_merged!('rails')
 RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = true
