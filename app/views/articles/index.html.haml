@@ -1,2 +1,7 @@
-%h1 Hello
+%h1 The Hub News
+.articles
+  - @articles.each do |article|
+    .article_box{class: "w-1/3", id: "#{dom_id(article)}"}
+      %h3= article.title
+      %p= truncate(article.content, length: 100, separator: ' ', ommision: "... (Read More)")
 =link_to 'Become a subscriber', new_user_registration_path
