@@ -4,15 +4,15 @@
 @tailwind utilities;
 
 h1 {
-  @apply text-center m-6
+	@apply text-center m-6
 }
 
 h3 {
-  @apply text-center pt-6
+	@apply text-center pt-6
 }
 
 p {
-  @apply text-center p-4 text-justify
+	@apply text-center p-4 text-justify
 }
 
 .form_container {
@@ -44,9 +44,9 @@ p {
 }
 
 .articles{
-  @apply flex p-4
+	@apply flex p-4
 }
 
 .article_box{
-  @apply text-center border-black border-solid border-2 m-4
+	@apply text-center border-black border-solid border-2 m-4
 }
