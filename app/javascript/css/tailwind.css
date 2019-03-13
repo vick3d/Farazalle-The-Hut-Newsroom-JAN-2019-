@@ -1,22 +1,52 @@
+
 @tailwind preflight;
 @tailwind components;
 @tailwind utilities;
 
 h1 {
-  @apply text-center m-6
-}
-.articles{
-  @apply flex p-4
-}
-
-.article_box{
-  @apply text-center border-black border-solid border-2 m-4
+	@apply text-center m-6
 }
 
 h3 {
-  @apply text-center pt-6
+	@apply text-center pt-6
 }
 
 p {
-  @apply text-center p-4 text-justify
+	@apply text-center p-4 text-justify
+}
+
+.form_container {
+	@apply flex justify-center
+}
+
+.form_wrapper {
+	@apply w-full max-w-xs
+}
+
+.form_container {
+	@apply bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex justify-center
+}
+
+.label {
+	@apply block text-grey-darker text-sm font-bold mb-2
+}
+
+.input_field {
+	@apply shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight
+}
+
+.button {
+	@apply bg-red text-white font-bold py-2 px-4 rounded
+}
+
+.button:hover {
+	@apply bg-red-dark
+}
+
+.articles{
+	@apply flex p-4
+}
+
+.article_box{
+	@apply text-center border-black border-solid border-2 m-4
 }
