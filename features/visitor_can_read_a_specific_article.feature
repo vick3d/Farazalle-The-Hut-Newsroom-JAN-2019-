@@ -13,7 +13,7 @@ Feature: Visitor can read a specific article
 		Given I visit the "landing" page
 		Then I should see "Great articles! This site's popularity is raising so quick!" for "The Hub News is the site of the moment"
 		And I should see "Ice can be still spotted on the street, watch out!" for "Spring hasn't arrived in Sweden yet"
-		And I click on "Read" for "The Hub News is the site of the moment"
+		And I click on "The Hub News is the site of the moment"
 		Then I should see "Great articles! This site's popularity is raising so quick!"
 		And I should see an article image
 		But I should not see "Ice can be still spotted on the street, watch out!"
