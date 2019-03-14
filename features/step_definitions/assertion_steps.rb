@@ -2,6 +2,14 @@ Then("I should see {string}") do |content|
 	expect(page).to have_content content
 end
 
+Then("I should not see {string}") do |content|
+	expect(page).not_to have_content content
+end
+
+Then("I should see an article image") do
+  expect(page).to have_selector(".article_image")
+end
+
 Then("I should see {string} for {string}") do |expected_content, title|
 	@article = Article.find_by_title(title)
 	within("#article_#{@article.id}") do
