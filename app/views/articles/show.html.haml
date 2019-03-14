@@ -1,6 +1,6 @@
-.border-b.border-grey-light.p-4.p-10.flex.justify-center
-	.max-w-sm.rounded.overflow-hidden.shadow-lg
-		%p= @article.title
+.article_wrapper
+	.article
+		%h3= @article.title
 		=image_tag @article.image, class: 'article_image w-full'
-		%p.text-grey-darker.text-base= @article.content
-=link_to 'Back', root_path, class: 'button'
+		%p.article_content= @article.content
+		=link_to 'Back', root_path, class: 'button'
