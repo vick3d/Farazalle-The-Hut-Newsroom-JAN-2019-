@@ -4,10 +4,14 @@ Feature: Visitor can read a specific article
 	I would like to be able to click on an article and have it displayed on a separate page
 
 	Background:
-		Given the following articles exist
-			| title                                          | content                                                      | image																																		|
-			| The Hub News is the site of the moment         | Great articles! This site's popularity is raising so quick!  |	https://cdn.pixabay.com/photo/2016/11/29/04/19/beach-1867285__340.jpg		|
-			| Spring hasn't arrived in Sweden yet            | Ice can be still spotted on the street, watch out!           | https://cdn.pixabay.com/photo/2016/11/29/04/19/beach-1867285__340.jpg   |
+		Given the following categories exist
+		| name 		|
+		| sports	|
+		| tech   	|
+		And the following articles exist
+		| title                                          | content                                                      | image																																		| category |
+		| The Hub News is the site of the moment         | Great articles! This site's popularity is raising so quick!  |	https://cdn.pixabay.com/photo/2016/11/29/04/19/beach-1867285__340.jpg		|		tech	 |
+		| Spring hasn't arrived in Sweden yet            | Ice can be still spotted on the street, watch out!           | https://cdn.pixabay.com/photo/2016/11/29/04/19/beach-1867285__340.jpg   |	sports	 |
 
 	Scenario: Visitor can read a specific article
 		Given I visit the "landing" page
