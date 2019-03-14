@@ -1,9 +1,9 @@
-=link_to_unless_current "English", locale: "en"
-=link_to_unless_current "Svenska", locale: "sv"
+= link_to_unless_current "English", locale: "en"
+= link_to_unless_current "Svenska", locale: "sv"
 %h1 The Hub News
 .articles
 	- @articles.each do |article|
 		.article_box{class: "w-1/3", id: "#{dom_id(article)}"}
-			=link_to article.title, article_path(article)
+			= link_to article.title, article_path(article)
 			%p= truncate(article.content, length: 100, separator: ' ', ommision: "... (Read More)")
 =link_to t('signup'), new_user_registration_path
