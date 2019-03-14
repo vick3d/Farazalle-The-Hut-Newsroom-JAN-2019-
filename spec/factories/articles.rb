@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :article do
     title { "MyString" }
-    content { "It is a beautiful day" }
+		content { "It is a beautiful day" }
+		status { "free" }
   end
 end
