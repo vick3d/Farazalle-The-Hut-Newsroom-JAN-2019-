@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2019_03_13_213311) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "access"
     t.string "image"
   end
 
