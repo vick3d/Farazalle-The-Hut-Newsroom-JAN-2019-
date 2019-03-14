@@ -10,7 +10,6 @@ Then("I should see an article image") do
   expect(page).to have_selector(".article_image")
 end
 
-
 Then("I should see {string} for {string}") do |expected_content, title|
 	@article = Article.find_by_title(title)
 	within("#article_#{@article.id}") do
