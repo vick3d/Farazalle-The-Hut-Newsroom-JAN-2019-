@@ -8,7 +8,7 @@ Feature: Visitor can change language
 
 	Scenario: View list of articles on the landing page [English]
 			And I click on "English"
-			Then I should see "Become a Subscriber"
+			Then I should see "Become a subscriber"
 
 	Scenario: View list of articles on the landing page [Swedish]
 			And I click on "Svenska"
