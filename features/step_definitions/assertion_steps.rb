@@ -23,3 +23,10 @@ Then("I should not see {string} for {string}") do |expected_content, title|
 		expect(page).not_to have_content expected_content
 	end
 end
+
+Then("I should see {string} in {string}") do |expected_content, name|
+	category = Category.find_by_name(name)
+	within("#category_#{category.id}") do
+		expect(page).to have_content expected_content
+	end
+end
