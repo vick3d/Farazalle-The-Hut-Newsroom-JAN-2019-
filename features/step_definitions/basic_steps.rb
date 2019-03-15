@@ -25,7 +25,7 @@ Given("I fill in {string} with {string}") do |element, value|
 	fill_in element, with: value
 end
 
-Given("the following users exist") do |table|
+And("the following users exist") do |table|
 	table.hashes.each do |user|
 		create(:user, user)
 	end
