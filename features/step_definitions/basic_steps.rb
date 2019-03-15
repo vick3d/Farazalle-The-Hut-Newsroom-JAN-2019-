@@ -24,3 +24,14 @@ end
 Given("I fill in {string} with {string}") do |element, value|
 	fill_in element, with: value
 end
+
+And("the following users exist") do |table|
+	table.hashes.each do |user|
+		create(:user, user)
+	end
+end
+
+Given("I am logged in as {string}") do |email|
+	user = User.find_by(email: email)
+	login_as(user, scope: :user)
+end
