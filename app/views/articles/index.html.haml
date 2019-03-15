@@ -8,5 +8,5 @@
 					= link_to article.title, article_path(article)
 					%p= truncate(article.content, length: 100, separator: ' ', ommision: "... (Read More)")
 				- else
-					= link_to article.title, new_user_registration_path
+					= link_to article.title, (user_signed_in? ? article_path(article) : new_user_registration_path)
 					%p= truncate(article.content, length: 100, separator: ' ', ommision: "... (Read More)")
