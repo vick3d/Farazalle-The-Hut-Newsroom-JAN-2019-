@@ -11,8 +11,11 @@ RSpec.describe Article, type: :model do
     it { is_expected.to validate_presence_of :content }
     it { is_expected.to validate_length_of(:title).is_at_least(5) }
 		it { is_expected.to validate_length_of(:content).is_at_least(10) }
+	end
+
+	describe 'Associations' do
 		it { should belong_to(:category) }
-  end
+	end
 
   describe 'Factory' do
     it 'should have valid Factory' do
