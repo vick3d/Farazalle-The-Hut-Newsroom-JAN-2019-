@@ -1,7 +1,7 @@
 %h1 The Hub News
 - @categories.each do |category|
 	%div{id: dom_id(category)}
-		%p= category.name.capitalize
+		%p= t(category.name.capitalize)
 		-category.articles.each do |article|
 			.article_box{id: "#{dom_id(article)}"}
 				- if article.status == "free"
