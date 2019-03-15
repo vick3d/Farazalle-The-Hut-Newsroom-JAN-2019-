@@ -10,6 +10,7 @@ RSpec.describe Category, type: :model do
     it { is_expected.to validate_uniqueness_of :name }
 		it { should_not allow_value("weather").for(:name) }
 		it { should allow_value("sports").for(:name) }
+		it { should have_many(:articles) }
 	end
 
   describe 'Factory' do

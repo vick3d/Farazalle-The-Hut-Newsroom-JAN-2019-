@@ -26,3 +26,4 @@ Feature: Visitor can see categorized articles
 		And I should see "Entertainment"
 		And I should see "Politics"
 		And I should see "The Hub News is the site of the moment" in "sports"
+		And I should see "Spring hasn't arrived in Sweden yet" in "tech"
