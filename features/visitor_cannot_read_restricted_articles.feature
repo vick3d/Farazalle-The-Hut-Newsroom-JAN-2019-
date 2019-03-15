@@ -5,9 +5,9 @@ Feature: Visitor cannot read restricted articles
 
 	Background:
 		Given the following articles exist
-			| title                                  | content                                                     | image                                                                 | status     |
-			| The Hub News is the site of the moment | Great articles! This site's popularity is raising so quick! | https://cdn.pixabay.com/photo/2016/11/29/04/19/beach-1867285__340.jpg | free       |
-			| Spring hasn't arrived in Sweden yet    | Ice can be still spotted on the street, watch out!          | https://cdn.pixabay.com/photo/2016/11/29/04/19/beach-1867285__340.jpg | restricted |
+			| title                                  | content                                                     | image                                                                 | status     | category |
+			| The Hub News is the site of the moment | Great articles! This site's popularity is raising so quick! | https://cdn.pixabay.com/photo/2016/11/29/04/19/beach-1867285__340.jpg | free       | tech     |
+			| Spring hasn't arrived in Sweden yet    | Ice can be still spotted on the street, watch out!          | https://cdn.pixabay.com/photo/2016/11/29/04/19/beach-1867285__340.jpg | restricted | sports   |
 
 		And I visit the "landing" page
 		Then I should see "Great articles! This site's popularity is raising so quick!" for "The Hub News is the site of the moment"

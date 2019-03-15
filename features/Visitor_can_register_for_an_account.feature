@@ -1,5 +1,4 @@
 Feature: Visitor can register for an account
-
    As a Visitor,
    In order to access unique features on the news app,
    I would like to be able to register for an account on the site.
