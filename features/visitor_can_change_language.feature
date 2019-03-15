@@ -1,10 +1,18 @@
 Feature: Visitor can change language
-  As a visitor,
+	As a visitor,
 	In order to read the articles in my native language,
 	I would like to have the option to change the language to Swedish
 
 	Background:
-		Given I visit the "landing" page
+		Given the following categories exist
+			| name          |
+			| sports        |
+			| tech          |
+			| local         |
+			| entertainment |
+			| global        |
+			| politics      |
+		And I visit the "landing" page
 
 	Scenario: View list of articles and categories on the landing page [English]
 		When I click on "English"
@@ -15,9 +23,6 @@ Feature: Visitor can change language
 		And I should see "Entertainment"
 		And I should see "Politics"
 		And I should see "Tech"
-
-
-
 
 	Scenario: View list of articles and categories on the landing page [Swedish]
 		When I click on "Svenska"
