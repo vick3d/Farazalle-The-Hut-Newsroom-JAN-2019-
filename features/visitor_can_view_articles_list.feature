@@ -5,10 +5,10 @@ Feature: Visitor can view all listed articles
 
     Background:
 			Given the following articles exist
-			| title                                          | content                                                                                                                                                                                     | category |
-			| The Hub News is the site of the moment         | Great articles! This site's popularity is raising so quick!                                                                                                                                 |	tech		|
-			| Spring hasn't arrived in Sweden yet            | Ice can be still spotted on the street, watch out!                                                                                                                                          |	sports	|
-			| Eating cinnamon buns increases life expectancy | Researchers are running clinical studies to see the benefits of cinnamon buns consumption. Some state that it might be correlated with an increase in life expectancy, is that really true? |	local		|
+				| title                                          | content                                                                                                                                                                                     | category |
+				| The Hub News is the site of the moment         | Great articles! This site's popularity is raising so quick!                                                                                                                                 |	tech		|
+				| Spring hasn't arrived in Sweden yet            | Ice can be still spotted on the street, watch out!                                                                                                                                          |	sports	|
+				| Eating cinnamon buns increases life expectancy | Researchers are running clinical studies to see the benefits of cinnamon buns consumption. Some state that it might be correlated with an increase in life expectancy, is that really true? |	local		|
 
     Scenario: View list of articles on the landing page
 			Given I visit the "landing" page

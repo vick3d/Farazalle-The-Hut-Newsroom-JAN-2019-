@@ -2,7 +2,6 @@ require 'coveralls'
 Coveralls.wear_merged!('rails')
 require 'cucumber/rails'
 
-
 ActionController::Base.allow_rescue = false
 begin
 	DatabaseCleaner.strategy = :transaction
@@ -32,3 +31,7 @@ World(FactoryBot::Syntax::Methods)
 
 Capybara.server = :puma
 Capybara.javascript_driver = :chrome
+
+Warden.test_mode!
+World Warden::Test::Helpers
+After { Warden.test_reset! }
