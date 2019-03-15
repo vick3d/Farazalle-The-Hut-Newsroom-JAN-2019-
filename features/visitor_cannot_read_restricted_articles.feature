@@ -21,4 +21,5 @@ Feature: Visitor cannot read restricted articles
 
 	Scenario: Visitor cannot read a resctricted article [Sad Path]
 		When I click on "Spring hasn't arrived in Sweden yet"
-		Then I should not see "Ice can be still spotted on the street, watch out!"
+		Then I should be on subscription page
+		And I should not see "Ice can be still spotted on the street, watch out!"

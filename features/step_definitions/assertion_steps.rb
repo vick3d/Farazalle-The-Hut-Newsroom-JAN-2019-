@@ -23,3 +23,7 @@ Then("I should not see {string} for {string}") do |expected_content, title|
 		expect(page).not_to have_content expected_content
 	end
 end
+
+Then("I should be on subscription page") do
+	expect(current_path).to eq new_user_registration_path
+end
