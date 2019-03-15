@@ -1,0 +1,13 @@
+%nav.navbar
+	.navbar_wrapper
+		%svg.nav_image{:height => "54", :viewbox => "0 0 54 54", :width => "54", :xmlns => "http://www.w3.org/2000/svg"}
+			%path{:d => ""}
+		= link_to 'The Hub News', root_path, class: "nav_header"
+	.nav_link_block
+		.nav_links_div
+			= link_to_unless_current "English", locale: "en", class: "nav_links"
+			= link_to_unless_current "Svenska", locale: "sv", class: "nav_links"
+		.subscription
+			= link_to t('signup'), new_user_registration_path, class: "subscribe_button"
+
+

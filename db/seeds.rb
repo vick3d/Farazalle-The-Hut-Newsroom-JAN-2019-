@@ -5,6 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-article1 = Article.create(title: "The Hub News is the site of the moment", content: "Great articles! This site's popularity is raising so quick!")
-article2 = Article.create(title: "Spring hasn't arrived in Sweden yet", content: "Ice can be still spotted on the street, watch out!")
-article3 = Article.create(title: "Eating cinnamon buns increases life expectancy", content: "Researchers are running clinical studies to see the benefits of cinnamon buns consumption. Some state that it might be correlated with an increase in life expectancy, is that really true?")
+
+sports = Category.create(name: "sports")
+tech =	Category.create(name: "tech")
+local = Category.create(name: "local")
+global = Category.create(name: "global")
+entertainment = Category.create(name: "entertainment")
+politics = Category.create(name: "politics")
+
+article1 = Article.create(title: "The Hub News is the site of the moment", content: "Great articles! This site's popularity is raising so quick!", image:"https://cdn.pixabay.com/photo/2016/11/29/04/19/beach-1867285__340.jpg", category_id: 1)
+article2 = Article.create(title: "Spring hasn't arrived in Sweden yet", content: "Ice can be still spotted on the street, watch out!", image:"https://cdn.pixabay.com/photo/2016/11/29/04/19/beach-1867285__340.jpg", category_id: 2)
+article3 = Article.create(title: "Eating cinnamon buns increases life expectancy", content: "Researchers are running clinical studies to see the benefits of cinnamon buns consumption. Some state that it might be", image:"https://cdn.pixabay.com/photo/2016/11/29/04/19/beach-1867285__340.jpg", category_id: 3)

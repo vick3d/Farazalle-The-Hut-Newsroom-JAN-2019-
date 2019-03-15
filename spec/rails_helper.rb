@@ -1,8 +1,12 @@
-require 'spec_helper'
+require 'coveralls'
+Coveralls.wear_merged!('rails')
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
-abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
+require 'spec_helper'
+
+abort("The Rails environment is running in production mode!") if Rails.env.production?
+
 begin
   ActiveRecord::Migration.maintain_test_schema!
 rescue ActiveRecord::PendingMigrationError => e

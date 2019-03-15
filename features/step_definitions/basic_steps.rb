@@ -1,6 +1,14 @@
 Given("the following articles exist") do |table|
-	table.hashes.each do |article|
-		create(:article, article)
+  table.hashes.each do |article|
+    category = Category.find_or_create_by(name: article[:category])
+    article.except!('category_id')
+    create(:article, article.merge(category: category))
+  end
+end
+
+Given("the following categories exist") do |table|
+	table.hashes.each do |category|
+		create(:category, category)
 	end
 end
 

@@ -12,7 +12,8 @@
     = javascript_pack_tag 'application'
   %script{src: "https://js.stripe.com/v3"}
 
-  %body
-    %p= notice
-    %p= alert
-  = yield
+	%body
+		= render partial: "/layouts/navbar"
+		%p= notice
+		%p= alert
+	= yield
