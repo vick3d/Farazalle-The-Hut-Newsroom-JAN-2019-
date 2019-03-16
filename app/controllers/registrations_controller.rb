@@ -2,9 +2,9 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     # get paid first before we actually create the user
-    random_password = [*('a'..'z'),*('0'..'9')].shuffle[0,6].join
-    build_resource(sign_up_params.merge(password: random_password))
-
+    # random_password = [*('a'..'z'),*('0'..'9')].shuffle[0,6].join
+    # build_resource(sign_up_params.merge(password: random_password))
+    build_resource(sign_up_params)
     resource.save
 
     yield resource if block_given?
