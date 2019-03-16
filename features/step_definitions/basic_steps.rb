@@ -17,6 +17,10 @@ When("I visit the {string} page") do |page_name|
 	visit page
 end
 
+When('I visit the application') do 
+	visit root_path
+end
+
 Given("I click on {string}") do |link|
 	click_on link
 end

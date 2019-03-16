@@ -3,8 +3,12 @@ Feature: Visitor can become a Registered User and a Subscriber at once
 	As a Visitor
 	In order to get access to the best articles
 	I would like to be able to become a Subscriber
-
 	
+	Background:
+		Given the following articles exist
+			| title                                  | category |
+			| The Hub News is the site of the moment | tech     |
+			| Spring hasn't arrived in Sweden yet    | sports   |
 
 	Scenario: View list of articles on the landing page
 		Given I visit the application
