@@ -18,7 +18,7 @@ chrome_options = %w[disable-popup-blocking disable-infobars]
 chrome_options << 'auto-open-devtools-for-tabs'
 
 # Toggle this to use headless mode
-chrome_options << 'headless'
+# chrome_options << 'headless'
 
 Capybara.register_driver :chrome do |app|
   options = Selenium::WebDriver::Chrome::Options.new(

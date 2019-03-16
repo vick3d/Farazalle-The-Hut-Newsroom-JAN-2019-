@@ -9,13 +9,19 @@
 import "../css/tailwind.css"
 
 document.addEventListener('turbolinks:load', () => {
-	const subscriptionForm = document.getElementById('subscription_form')
+	const subscriptionForm = document.getElementById('new_user')
 
 	if (subscriptionForm) {
 		const stripe = Stripe('pk_testxxxxx')
-		const elements = stripe.elements()
-		const card = elements.create('card', {hidePostalCode: true})
+		const elements = stripe.elements()	
 
-		card.mount('#card_element')
+		let cardNumberElement = elements.create('cardNumber');
+		let cardExpiryElement = elements.create('cardExpiry');
+		let cardCvcElement = elements.create('cardCvc');
+
+		cardNumberElement.mount('#card_number');
+		cardExpiryElement.mount('#exp_date');
+		cardCvcElement.mount('#cvc');
+
 	}
 })
