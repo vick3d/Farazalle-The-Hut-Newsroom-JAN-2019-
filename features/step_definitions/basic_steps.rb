@@ -29,10 +29,6 @@ Given("I fill in {string} with {string}") do |element, value|
 	fill_in element, with: value
 end
 
-And("I should be redirected to the purchase subscription page") do
-	expect(current_path).to eq new_user_registration_path
-end
-
 And("the following users exist") do |table|
 	table.hashes.each do |user|
 		create(:user, user)
@@ -41,9 +37,14 @@ end
 
 Given("I am logged in as {string}") do |email|
 	user = User.find_by(email: email)
+	user.confirm
 	login_as(user, scope: :user)
 end
 
 Then('stop') do
 	binding.pry
+end
+
+Then("show me the page") do
+  save_and_open_page
 end

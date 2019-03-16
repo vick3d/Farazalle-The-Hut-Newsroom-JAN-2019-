@@ -34,3 +34,7 @@ Then("I should see {string} in {string}") do |expected_content, name|
 		expect(page).to have_content expected_content
 	end
 end
+
+And("I should be redirected to the purchase subscription page") do
+	expect(current_path).to eq new_user_registration_path
+end
