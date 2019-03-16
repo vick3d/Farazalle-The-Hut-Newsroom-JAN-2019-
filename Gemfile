@@ -20,6 +20,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+	gem 'email_spec'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
 	gem 'chromedriver-helper'
