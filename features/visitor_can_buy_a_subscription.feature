@@ -1,3 +1,4 @@
+@javascript
 Feature: Visitor can buy a subscription
 	As a Visitor
 	In order to get access to the best articles
