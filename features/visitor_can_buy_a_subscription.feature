@@ -21,13 +21,13 @@ Feature: Visitor can become a Registered User and a Subscriber at once
 		And I fill in "CVC" with "123" in the Stripe input field
 		And I click on "Pay for Subscription"
 		#from email-spec
-		And I should receive an email
+		And "thomas@craft.com" should receive 1 email
     When I open the email
     Then I should see "confirm" in the email body
     When I follow "confirm" in the email
     Then I should see "Confirm your new account"
 		#suggestion
-		When I click on "Confirm"
+		When I click on "Change password"
 
 		Then I should see "THANK YOU AND WELCOME!"
 		And an email should be sent to "thomas@craft.com"
