@@ -13,13 +13,13 @@ Feature: Visitor can become a Registered User and a Subscriber at once
 	Scenario: View list of articles on the landing page
 		Given I visit the application
 		And I click on "Subscribe"
-		Then stop
+		# Then stop
 		And I fill in "Name on card" with "Thomas Ochman"
 		And I fill in "Email" with "thomas@craft.com"
-		And I fill in "Cardnumber" with "4242424242424242"
-		And I fill in "Expiry date" with "12/22"
-		And I fill in "CVC" with "123"
-		And I click on "PAY"
+		And I fill in "Cardnumber" with "4242424242424242" in the Stripe input field
+		And I fill in "Expiry date" with "12/22" in the Stripe input field
+		And I fill in "CVC" with "123" in the Stripe input field
+		And I click on "Pay for Subscription"
 		Then I should see "THANK YOU AND WELCOME!"
 		And an email should be sent to "thomas@craft.com"
 		And the email should contain a link to account confirmation
