@@ -1,7 +1,7 @@
 %h1 The Hub News
 - @categories.each do |category|
 	%div{id: dom_id(category)}
-		%p= t(category.name.capitalize)
+		%p.text-center= t(category.name.capitalize)
 		%div.flex.flex-wrap.mb-4.justify-center
 			-category.articles.each do |article|
 				.article.text-center{id: "#{dom_id(article)}"}
