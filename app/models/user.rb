@@ -3,9 +3,11 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :confirmable
+         :confirmable, :trackable
 
   protected
+
+  enum role: { registered: 0, subscriber: 1 }
 
   def password_required?
     confirmed? ? super : false

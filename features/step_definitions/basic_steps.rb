@@ -48,3 +48,8 @@ end
 Then("show me the page") do
   save_and_open_page
 end
+
+
+Then("I fill in {string} with my temp password") do |field|
+  fill_in field, with: @user.temp_password
+end

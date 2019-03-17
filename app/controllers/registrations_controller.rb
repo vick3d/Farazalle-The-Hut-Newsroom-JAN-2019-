@@ -1,12 +1,12 @@
-class RegistrationsController < Devise::RegistrationsController
+# frozen_string_literal: true
 
+class RegistrationsController < Devise::RegistrationsController
   def create
     # get paid first before we actually create the user
-    # random_password = [*('a'..'z'),*('0'..'9')].shuffle[0,6].join
-    # build_resource(sign_up_params.merge(password: random_password))
-    build_resource(sign_up_params)
+    random_password = [*('a'..'z'), *('0'..'9')].sample(6).join
+    build_resource(sign_up_params.merge(password: random_password,
+                                        temp_password: random_password))
     resource.save
-
     yield resource if block_given?
     if resource.persisted?
       if resource.active_for_authentication?
@@ -23,7 +23,5 @@ class RegistrationsController < Devise::RegistrationsController
       set_minimum_password_length
       respond_with resource
     end
-
   end
-
 end

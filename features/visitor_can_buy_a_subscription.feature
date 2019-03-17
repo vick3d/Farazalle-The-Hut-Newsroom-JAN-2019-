@@ -25,15 +25,19 @@ Feature: Visitor can become a Registered User and a Subscriber at once
 		When I open the email
 		Then I should see "Welcome to The Hub News thomas@craft.com!" in the email body
 		When "thomas@craft.com" follow "Confirm my account" in the email
+		And I should be a subscriber
+		Then I should see "You have to change your password"
+		When I fill in "Password" with "new_password"
+		And I fill in "Password confirmation" with "new_password"
+		And I fill in "Current password" with my temp password
+		When I click on "Update"
 		Then show me the page
-		Then I should see "Confirm your new account"
-		#suggestion
-		When I click on "Change password"
 
-		# Then I should see "THANK YOU AND WELCOME!"
-		# And an email should be sent to "thomas@craft.com"
-		# And the email should contain a link to account confirmation
-		# And I should be a subscriber
+
+# Then I should see "THANK YOU AND WELCOME!"
+# And an email should be sent to "thomas@craft.com"
+# And the email should contain a link to account confirmation
+# And I should be a subscriber
 
 
 
