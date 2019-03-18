@@ -8,6 +8,5 @@
 			= link_to_unless_current "English", locale: "en", class: "nav_links"
 			= link_to_unless_current "Svenska", locale: "sv", class: "nav_links"
 		.subscription
+			= link_to t('login'), new_user_session_path, class: "subscribe_button"
 			= link_to t('signup'), new_user_registration_path, class: "subscribe_button"
-
-
