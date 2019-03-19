@@ -10,12 +10,12 @@ Feature: Journalist can sign in
 			| viktor@mail.com | user       |
 
 	Scenario: Logging in as Journalist (access to staff page)
-		When I am logged in as "amanda@mail.com"
+		Given I am logged in as "amanda@mail.com"
 		And I visit the "landing" page
 		And I click on "Employee"
 		Then I should see "Welcome to the staff page"
 
 	Scenario: Logging in as User (not access to staff page)
-		When I am logged in as "viktor@mail.com"
+		Given I am logged in as "viktor@mail.com"
 		And I visit the "landing" page
 		Then I should not see "Employee"
