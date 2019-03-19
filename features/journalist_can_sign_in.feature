@@ -5,9 +5,9 @@ Feature: Journalist can sign in
 
 	Background:
 		Given the following users exist
-			| email           | role       |
-			| amanda@mail.com | journalist |
-			| viktor@mail.com | user       |
+			| email           | role      |
+			| amanda@mail.com | 		2			|
+			| viktor@mail.com |    0	    |
 
 	Scenario: Logging in as Journalist (access to staff page)
 		Given I am logged in as "amanda@mail.com"
